@@ -6,30 +6,31 @@
 
 <title>Nurul Hudah Sunnah Media</title>
 
-<!-- WhatsApp and Telegram Preview Meta Tags -->
+<!-- Meta preview for WhatsApp and Telegram -->
 <meta property="og:title" content="Nurul Hudah Sunnah Media">
-<meta property="og:description" content="Authentic Islamic lectures from trusted scholars. Click to open and listen.">
-<meta property="og:image" content="https://nurulhudahnigeria.github.io/heading_20260222_175116_0000.png">
-<meta property="og:url" content="https://nurulhudahnigeria.github.io/">
-<meta property="og:type" content="website">
+<meta property="og:description" content="Islamic Lectures by Trusted Scholars">
+<meta property="og:image" content="https://drive.google.com/uc?export=view&id=1uzi8GuAjgWAmJoA98ZRzaijCYVy0itYf">
+<meta property="og:url" content="https://hnigeria.github.io/">
+<meta name="twitter:card" content="summary_large_image">
 
 <style>
 
 body{
-font-family: Arial;
 margin:0;
-background:#f1f1f1;
+font-family:Arial;
+background:#f2f2f2;
 }
 
 header{
-background:#0d47a1;
+background:#1e4fa3;
 color:white;
-padding:20px;
 text-align:center;
+padding:30px 10px;
 }
 
 header h1{
 margin:0;
+font-size:32px;
 }
 
 .search-box{
@@ -37,97 +38,87 @@ margin-top:15px;
 }
 
 .search-box input{
-padding:10px;
-width:80%;
+width:90%;
 max-width:400px;
-border-radius:5px;
+padding:12px;
+font-size:16px;
+border-radius:8px;
 border:none;
 }
 
 .container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
 padding:20px;
 }
 
-.scholar{
+.card{
 background:white;
+border-radius:12px;
 padding:15px;
-border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
 text-align:center;
-box-shadow:0 2px 6px rgba(0,0,0,0.2);
 }
 
-.scholar img{
+.card img{
 width:100%;
-height:200px;
-object-fit:cover;
 border-radius:10px;
+}
+
+.card h2{
+margin-top:10px;
 }
 
 footer{
-background:#0d47a1;
+background:#1e4fa3;
 color:white;
 text-align:center;
 padding:15px;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <h1>Nurul Hudah Sunnah Media</h1>
 
 <div class="search-box">
-<input type="text" id="searchInput" placeholder="Search scholar..." onkeyup="searchScholar()">
+<input type="text" placeholder="Search scholar..." onkeyup="searchScholar(this.value)">
 </div>
 
 </header>
 
-<div class="container" id="scholars">
+<div class="container">
 
-<div class="scholar">
-
-<img src="https://nurulhudahnigeria.github.io/heading_20260222_175116_0000.png">
-
-<h3>Dr. Bashir Aliyu Umar OON</h3>
-
+<div class="card" data-name="bashir">
+<img src="https://drive.google.com/uc?export=view&id=1uzi8GuAjgWAmJoA98ZRzaijCYVy0itYf">
+<h2>Dr. Bashir Aliyu Umar OON</h2>
 </div>
 
 </div>
 
 <footer>
-
 © 2026 Nurul Hudah Sunnah Media
-
 </footer>
 
 <script>
 
-function searchScholar(){
+function searchScholar(value){
 
-let input=document.getElementById("searchInput").value.toLowerCase();
+let cards=document.querySelectorAll(".card");
 
-let scholars=document.getElementsByClassName("scholar");
+cards.forEach(card=>{
 
-for(let i=0;i<scholars.length;i++){
+let name=card.getAttribute("data-name");
 
-if(scholars[i].innerText.toLowerCase().includes(input)){
-
-scholars[i].style.display="block";
-
+if(name.includes(value.toLowerCase())){
+card.style.display="block";
 }else{
-
-scholars[i].style.display="none";
-
+card.style.display="none";
 }
 
-}
+});
 
 }
 
