@@ -6,19 +6,19 @@
 
 <title>Nurul Hudah Sunnah Media</title>
 
-<!-- Meta tags for WhatsApp / Telegram preview -->
+<!-- WhatsApp and Telegram Preview Meta Tags -->
 <meta property="og:title" content="Nurul Hudah Sunnah Media">
-<meta property="og:description" content="Authentic Islamic lectures from trusted scholars. Click to listen and download lectures.">
-<meta property="og:image" content="https://drive.google.com/uc?export=view&id=1uzi8GuAjgWAmJoA98ZRzaijCYVy0itYf">
-<meta property="og:url" content="https://nurulhudahnigeria.github.io">
+<meta property="og:description" content="Authentic Islamic lectures from trusted scholars. Click to open and listen.">
+<meta property="og:image" content="https://nurulhudahnigeria.github.io/heading_20260222_175116_0000.png">
+<meta property="og:url" content="https://nurulhudahnigeria.github.io/">
 <meta property="og:type" content="website">
 
 <style>
 
 body{
-font-family: Arial, sans-serif;
+font-family: Arial;
 margin:0;
-background:#f4f6f8;
+background:#f1f1f1;
 }
 
 header{
@@ -40,28 +40,23 @@ margin-top:15px;
 padding:10px;
 width:80%;
 max-width:400px;
-border:none;
 border-radius:5px;
+border:none;
 }
 
 .container{
-padding:20px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
+padding:20px;
 }
 
 .scholar{
 background:white;
-border-radius:10px;
-box-shadow:0 2px 6px rgba(0,0,0,0.2);
-text-align:center;
 padding:15px;
-transition:0.3s;
-}
-
-.scholar:hover{
-transform:scale(1.05);
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
 }
 
 .scholar img{
@@ -71,21 +66,17 @@ object-fit:cover;
 border-radius:10px;
 }
 
-.scholar h3{
-margin-top:10px;
-}
-
 footer{
-text-align:center;
-padding:15px;
 background:#0d47a1;
 color:white;
-margin-top:20px;
+text-align:center;
+padding:15px;
 }
 
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -98,26 +89,14 @@ margin-top:20px;
 
 </header>
 
-<div class="container" id="scholarContainer">
+<div class="container" id="scholars">
 
 <div class="scholar">
-<img src="https://drive.google.com/uc?export=view&id=1uzi8GuAjgWAmJoA98ZRzaijCYVy0itYf">
+
+<img src="https://nurulhudahnigeria.github.io/heading_20260222_175116_0000.png">
+
 <h3>Dr. Bashir Aliyu Umar OON</h3>
-</div>
 
-<div class="scholar">
-<img src="https://via.placeholder.com/300x300.png?text=Scholar">
-<h3>Coming Soon</h3>
-</div>
-
-<div class="scholar">
-<img src="https://via.placeholder.com/300x300.png?text=Scholar">
-<h3>Coming Soon</h3>
-</div>
-
-<div class="scholar">
-<img src="https://via.placeholder.com/300x300.png?text=Scholar">
-<h3>Coming Soon</h3>
 </div>
 
 </div>
@@ -130,23 +109,21 @@ margin-top:20px;
 
 <script>
 
-function searchScholar() {
+function searchScholar(){
 
-let input = document.getElementById("searchInput").value.toLowerCase();
+let input=document.getElementById("searchInput").value.toLowerCase();
 
-let scholars = document.getElementsByClassName("scholar");
+let scholars=document.getElementsByClassName("scholar");
 
-for (let i = 0; i < scholars.length; i++) {
+for(let i=0;i<scholars.length;i++){
 
-let name = scholars[i].innerText.toLowerCase();
+if(scholars[i].innerText.toLowerCase().includes(input)){
 
-if (name.includes(input)) {
+scholars[i].style.display="block";
 
-scholars[i].style.display = "";
+}else{
 
-} else {
-
-scholars[i].style.display = "none";
+scholars[i].style.display="none";
 
 }
 
@@ -158,5 +135,3 @@ scholars[i].style.display = "none";
 
 </body>
 </html>
-
-    
