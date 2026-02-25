@@ -1,88 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Nurul Hudah Sunnah Media</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+<title>Nurul Hudah Sunnah Media</title>
 
-    header {
-      background-color: #0b5ed7;
-      color: white;
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
+<!-- Meta tags for WhatsApp / Telegram preview -->
+<meta property="og:title" content="Nurul Hudah Sunnah Media">
+<meta property="og:description" content="Authentic Islamic lectures from trusted scholars. Click to listen and download lectures.">
+<meta property="og:image" content="https://drive.google.com/uc?export=view&id=1uzi8GuAjgWAmJoA98ZRzaijCYVy0itYf">
+<meta property="og:url" content="https://nurulhudahnigeria.github.io">
+<meta property="og:type" content="website">
 
-    .container {
-      padding: 20px;
-    }
+<style>
 
-    .scholar {
-      display: inline-block;
-      margin: 15px;
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 200px;
-    }
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f6f8;
+}
 
-    .scholar img {
-      width: 100%;
-      border-radius: 10px;
-    }
+header{
+background:#0d47a1;
+color:white;
+padding:20px;
+text-align:center;
+}
 
-    .scholar a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
+header h1{
+margin:0;
+}
 
-    footer {
-      margin-top: 20px;
-      padding: 10px;
-      background: #eee;
-    }
-  </style>
+.search-box{
+margin-top:15px;
+}
+
+.search-box input{
+padding:10px;
+width:80%;
+max-width:400px;
+border:none;
+border-radius:5px;
+}
+
+.container{
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.scholar{
+background:white;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
+text-align:center;
+padding:15px;
+transition:0.3s;
+}
+
+.scholar:hover{
+transform:scale(1.05);
+}
+
+.scholar img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.scholar h3{
+margin-top:10px;
+}
+
+footer{
+text-align:center;
+padding:15px;
+background:#0d47a1;
+color:white;
+margin-top:20px;
+}
+
+</style>
 
 </head>
-
 <body>
 
 <header>
-Nurul Hudah Sunnah Media
+
+<h1>Nurul Hudah Sunnah Media</h1>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search scholar..." onkeyup="searchScholar()">
+</div>
+
 </header>
 
-<div class="container">
+<div class="container" id="scholarContainer">
 
-  <div class="scholar">
-    <a href="#">
-      <img src="https://via.placeholder.com/200x200.png?text=Scholar+1">
-      <p>Dr. Bashir Aliyu Umar</p>
-    </a>
-  </div>
+<div class="scholar">
+<img src="https://drive.google.com/uc?export=view&id=1uzi8GuAjgWAmJoA98ZRzaijCYVy0itYf">
+<h3>Dr. Bashir Aliyu Umar OON</h3>
+</div>
 
-  <div class="scholar">
-    <a href="#">
-      <img src="https://via.placeholder.com/200x200.png?text=Scholar+2">
-      <p>Dr. Abubakar Muhammad Sani</p>
-    </a>
-  </div>
+<div class="scholar">
+<img src="https://via.placeholder.com/300x300.png?text=Scholar">
+<h3>Coming Soon</h3>
+</div>
+
+<div class="scholar">
+<img src="https://via.placeholder.com/300x300.png?text=Scholar">
+<h3>Coming Soon</h3>
+</div>
+
+<div class="scholar">
+<img src="https://via.placeholder.com/300x300.png?text=Scholar">
+<h3>Coming Soon</h3>
+</div>
 
 </div>
 
 <footer>
+
 © 2026 Nurul Hudah Sunnah Media
+
 </footer>
+
+<script>
+
+function searchScholar() {
+
+let input = document.getElementById("searchInput").value.toLowerCase();
+
+let scholars = document.getElementsByClassName("scholar");
+
+for (let i = 0; i < scholars.length; i++) {
+
+let name = scholars[i].innerText.toLowerCase();
+
+if (name.includes(input)) {
+
+scholars[i].style.display = "";
+
+} else {
+
+scholars[i].style.display = "none";
+
+}
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
+
+    
