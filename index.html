@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Nurul Hudah Sunnah Media</title>
 
 <!-- META PREVIEW -->
@@ -12,90 +11,136 @@
 <meta property="og:image" content="https://nurulhudahNigeria.github.io/heading_20260222_175116_0000.png">
 <meta property="og:url" content="https://nurulhudahNigeria.github.io/">
 <meta property="og:type" content="website">
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nurulhudahNigeria.github.io/heading_20260222_175116_0000.png">
 
 <style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#f2f2f2;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
 }
 
-header{
-background:#0d47a1;
-color:white;
-padding:20px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
+header {
+  background: #0d47a1;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.search-box{
-padding:15px;
-background:#0d47a1;
+.search-box {
+  padding: 15px;
+  background: #0d47a1;
 }
 
-.search-box input{
-width:100%;
-padding:12px;
-border-radius:5px;
-border:none;
-font-size:16px;
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
 }
 
-.container{
-padding:15px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 15px;
 }
 
-.card{
-background:white;
-padding:10px;
-margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,0.2);
-text-align:center;
+.card {
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.card img{
-width:100%;
-border-radius:10px;
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
-footer{
-background:#0d47a1;
-color:white;
-text-align:center;
-padding:15px;
+.card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
 }
 
+footer {
+  background: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* WhatsApp button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+}
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
-NURUL HUDAH
-</header>
+<header>NURUL HUDAH</header>
 
 <div class="search-box">
-<input type="text" placeholder="Search scholar...">
+  <input type="text" placeholder="Search scholar..." id="searchInput">
 </div>
 
-<div class="container">
-
-<div class="card">
-<img src="heading_20260222_175116_0000.png">
-<h3>Nurul Hudah Sunnah Media</h3>
+<div class="container" id="scholarContainer">
+  <!-- Scholar cards go here -->
 </div>
 
-</div>
+<footer>© 2026 Nurul Hudah Sunnah Media</footer>
 
-<footer>
-© 2026 Nurul Hudah Sunnah Media
-</footer>
+<a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="whatsapp-button">📱</a>
+
+<script>
+// Example scholars - later you can add all 30
+const scholars = [
+  {name: "Prof. Muhammad Sani Umar R/Lemo", img: "scholar1.png"},
+  {name: "Dr. Abubakar Muhd Sani Birnin Kudu", img: "scholar2.png"},
+  {name: "Dr. Ahmad Ibrahim Buk", img: "scholar3.png"},
+  {name: "Sheikh Abdurrazaq Yahaya Haifan", img: "scholar4.png"},
+  {name: "Dr. Abdallah Usman C/Kaya", img: "scholar5.png"}
+];
+
+const container = document.getElementById('scholarContainer');
+scholars.forEach(s => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `<img src="${s.img}" alt="${s.name}"><h3>${s.name}</h3>`;
+  container.appendChild(card);
+});
+
+// Search function
+document.getElementById('searchInput').addEventListener('keyup', function() {
+  const value = this.value.toLowerCase();
+  Array.from(container.children).forEach(card => {
+    const name = card.querySelector('h3').textContent.toLowerCase();
+    card.style.display = name.includes(value) ? '' : 'none';
+  });
+});
+</script>
 
 </body>
 </html>
+
