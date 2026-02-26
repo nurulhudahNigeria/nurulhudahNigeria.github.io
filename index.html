@@ -9,106 +9,104 @@
 <!-- META PREVIEW -->
 <meta property="og:title" content="Nurul Hudah Sunnah Media">
 <meta property="og:description" content="Authentic Islamic lectures from trusted scholars">
-<meta property="og:image" content="https://nurulhudahNigeria.github.io/heading_20260222_175116_0000.png">
+<meta property="og:image" content="https://nurulhudahNigeria.github.io/poster_s.jpg">
 <meta property="og:url" content="https://nurulhudahNigeria.github.io/">
 <meta property="og:type" content="website">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nurul Hudah Sunnah Media">
 <meta name="twitter:description" content="Islamic lectures from trusted scholars">
-<meta name="twitter:image" content="https://nurulhudahNigeria.github.io/heading_20260222_175116_0000.png">
+<meta name="twitter:image" content="https://nurulhudahNigeria.github.io/poster_s.jpg">
 
 <style>
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f2f2f2;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
 }
 
 /* Header */
-header{
-background:#0d47a1;
-color:white;
-text-align:center;
-padding:15px;
-font-size:28px;
-font-weight:bold;
+header {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 /* Header image */
-.header-image{
-width:100%;
-max-height:250px;
-object-fit:cover;
+.header-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
 }
 
 /* Search box */
-.search-box{
-background:#0d47a1;
-padding:10px;
+.search-box {
+    background: #0d47a1;
+    padding: 10px;
 }
 
-.search-box input{
-width:100%;
-padding:12px;
-border:none;
-border-radius:5px;
-font-size:16px;
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 /* Scholar grid */
-.container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-padding:15px;
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 15px;
 }
 
-.card{
-background:white;
-border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,0.2);
-text-align:center;
-overflow:hidden;
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
+    overflow: hidden;
 }
 
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.card h3{
-padding:10px;
-font-size:16px;
+.card h3 {
+    padding: 10px;
+    font-size: 16px;
 }
 
 /* WhatsApp button */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
 }
 
 /* Footer */
-footer{
-background:#0d47a1;
-color:white;
-text-align:center;
-padding:15px;
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
-
 </style>
 </head>
 
@@ -118,8 +116,8 @@ padding:15px;
 NURUL HUDAH
 </header>
 
-<!-- Header Preview Image -->
-<img src="heading_20260222_175116_0000.png" class="header-image">
+<!-- Header Image -->
+<img src="poster_s.jpg" class="header-image">
 
 <div class="search-box">
 <input type="text" placeholder="Search scholar..." id="search">
@@ -128,17 +126,17 @@ NURUL HUDAH
 <div class="container" id="scholars">
 
 <div class="card">
-<img src="heading_20260222_175116_0000.png">
+<img src="poster_s.jpg">
 <h3>Islamic Scholars Lectures</h3>
 </div>
 
 <div class="card">
-<img src="heading_20260222_175116_0000.png">
+<img src="poster_s.jpg">
 <h3>Qur'an and Sunnah Lessons</h3>
 </div>
 
 <div class="card">
-<img src="heading_20260222_175116_0000.png">
+<img src="poster_s.jpg">
 <h3>Trusted Scholars</h3>
 </div>
 
@@ -155,12 +153,11 @@ const search = document.getElementById("search");
 const cards = document.querySelectorAll(".card");
 
 search.addEventListener("keyup", function(){
-let filter = search.value.toLowerCase();
-
-cards.forEach(card=>{
-let text = card.innerText.toLowerCase();
-card.style.display = text.includes(filter) ? "" : "none";
-});
+    let filter = search.value.toLowerCase();
+    cards.forEach(card=>{
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(filter) ? "" : "none";
+    });
 });
 </script>
 
