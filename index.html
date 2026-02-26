@@ -24,7 +24,9 @@ header {background:#0d47a1;color:white;text-align:center;padding:15px;font-size:
 .search-box {background:#0d47a1;padding:10px;}
 .search-box input {width:100%;padding:12px;border:none;border-radius:5px;font-size:16px;}
 .container {display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;padding:15px;}
-.card {background:white;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.2);text-align:center;overflow:hidden;padding:20px;font-weight:bold;font-size:16px;}
+.card {background:white;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.2);text-align:center;overflow:hidden;padding:10px;}
+.card img {width:100%;height:200px;object-fit:cover;}
+.card h3 {padding:10px;font-size:16px;font-weight:bold;}
 .whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;}
 footer {background:#0d47a1;color:white;text-align:center;padding:15px;}
 </style>
@@ -40,11 +42,13 @@ footer {background:#0d47a1;color:white;text-align:center;padding:15px;}
 
 <div class="container" id="scholars">
 
-<!-- 30 Scholar Cards WITHOUT IMAGES -->
+<!-- Scholar 1 with real image -->
 <div class="card">
   <img src="scholar1.jpg" alt="PROF MUHAMMAD SANI UMAR R/L">
   <h3>PROF MUHAMMAD SANI UMAR R/L</h3>
 </div>
+
+<!-- Scholar 2 - 30 placeholders -->
 <div class="card">Scholar 2</div>
 <div class="card">Scholar 3</div>
 <div class="card">Scholar 4</div>
