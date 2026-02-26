@@ -34,25 +34,24 @@ header {background:#0d47a1;color:white;text-align:center;padding:15px;font-size:
   overflow:hidden;
   display:flex;
   flex-direction:column;
-  justify-content:flex-start;
-  height:auto; /* card height matches image + name */
+  justify-content:flex-end; /* name stays at bottom */
+  height:250px; /* total card height */
 }
 
 .card img {
   width:100%;
-  height:250px; /* fixed image height */
-  object-fit:cover; /* fills the card nicely */
+  height:calc(100% - 40px); /* leave space for name at bottom */
+  object-fit:cover; /* fills nicely, balanced */
   display:block;
   border-radius:10px 10px 0 0;
-  margin-bottom:5px;
 }
 
 .card h3 {
   padding:5px;
   font-size:16px;
   font-weight:bold;
-  background:white;
   margin:0;
+  background:white;
 }
 
 .whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;}
