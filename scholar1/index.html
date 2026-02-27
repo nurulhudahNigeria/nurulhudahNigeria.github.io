@@ -73,25 +73,44 @@ h2 {
 /* Cards container - vertical layout */
 .cards-container {
   display:flex;
-  flex-direction:column;   /* vertical stack */
+  flex-direction:column;
   align-items:center;
-  gap:10px;
+  gap:15px;
   margin-top:20px;
   width:100%;
-  max-width:200px;         /* same width as scholar picture */
+  max-width:200px; /* same width as scholar picture */
 }
 
 .card {
-  width:100%;               /* full width of container */
-  height:60px;
+  width:100%;
+  height:120px;
   background:white;
   border-radius:10px;
   box-shadow:0 3px 6px rgba(0,0,0,0.15);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-weight:bold;
   text-align:center;
+  cursor:pointer;
+}
+
+.card-img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.card-title {
+  text-align:center;
+  font-size:14px;
+  font-weight:bold;
+  margin-top:6px;
+}
+
+.card-link {
+  text-decoration:none;
+  color:inherit;
 }
 
 a.back-link {
@@ -119,9 +138,17 @@ a.back-link:hover {
   <img src="../scholar1.jpg" alt="PROF MUHAMMAD SANI UMAR R/L" class="scholar-img">
   <h2>PROF MUHAMMAD SANI UMAR R/L</h2>
 
-  <!-- 10 vertical cards -->
+  <!-- Cards -->
   <div class="cards-container">
-    <div class="card">Card 1</div>
+    <!-- Card 1 with picture and clickable -->
+    <a href="lecture1.html" class="card-link">
+      <div class="card">
+        <img src="Ramadan Tafsir 2026.jpg" alt="Ramadan Tafsir 2026" class="card-img">
+      </div>
+    </a>
+    <div class="card-title">Ramadan Tafsir 2026</div>
+
+    <!-- Other placeholder cards -->
     <div class="card">Card 2</div>
     <div class="card">Card 3</div>
     <div class="card">Card 4</div>
@@ -138,4 +165,3 @@ a.back-link:hover {
 
 </body>
 </html>
-  
