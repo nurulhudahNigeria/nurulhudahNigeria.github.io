@@ -6,7 +6,7 @@
 
 <title>Nurul Hudah Sunnah Media</title>
 
-<!-- META PREVIEW -->
+<!-- META PREVIEW (NOT REMOVED) -->
 <meta property="og:title" content="Nurul Hudah Sunnah Media">
 <meta property="og:description" content="Authentic Islamic lectures from trusted scholars">
 <meta property="og:image" content="https://nurulhudahNigeria.github.io/poster_s.jpg">
@@ -19,43 +19,93 @@
 <meta name="twitter:image" content="https://nurulhudahNigeria.github.io/poster_s.jpg">
 
 <style>
-body {margin:0;font-family:Arial,sans-serif;background:#f2f2f2;}
-header {background:#0d47a1;color:white;text-align:center;padding:15px;font-size:28px;font-weight:bold;}
-.search-box {background:#0d47a1;padding:10px;}
-.search-box input {width:100%;padding:12px;border:none;border-radius:5px;font-size:16px;}
-.container {display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;padding:15px;}
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f2f2f2;
+}
 
-/* Scholar card styles */
-.card {
-  background:white;
-  border-radius:10px;
-  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+header {
+  background:#0d47a1;
+  color:white;
   text-align:center;
+  padding:15px;
+  font-size:26px;
+  font-weight:bold;
+}
+
+.search-box {
+  background:#0d47a1;
+  padding:10px;
+}
+
+.search-box input {
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  font-size:16px;
+}
+
+/* CENTERED CONTAINER */
+.container {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  padding:20px;
+}
+
+/* REDUCED HORIZONTAL CARD */
+.card {
+  width:170px;              /* reduced width */
+  height:230px;             /* balanced height */
+  background:white;
+  border-radius:12px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.15);
   overflow:hidden;
   display:flex;
   flex-direction:column;
-  justify-content:flex-end; /* name stays at bottom */
-  height:250px; /* total card height */
 }
 
+/* BALANCED IMAGE */
 .card img {
   width:100%;
-  height:calc(100% - 40px); /* leave space for name at bottom */
-  object-fit:cover; /* fills nicely, balanced */
-  display:block;
-  border-radius:10px 10px 0 0;
+  height:180px;
+  object-fit:cover;
 }
 
+/* SCHOLAR NAME */
 .card h3 {
-  padding:5px;
-  font-size:16px;
-  font-weight:bold;
+  text-align:center;
+  font-size:14px;
+  padding:6px;
   margin:0;
-  background:white;
+  font-weight:bold;
 }
 
-.whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;}
-footer {background:#0d47a1;color:white;text-align:center;padding:15px;}
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  text-decoration:none;
+}
+
+footer {
+  background:#0d47a1;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
 </style>
 </head>
 
@@ -69,7 +119,7 @@ footer {background:#0d47a1;color:white;text-align:center;padding:15px;}
 
 <div class="container" id="scholars">
 
-<!-- Scholar 1 with balanced image and clickable folder -->
+<!-- Scholar 1 -->
 <div class="card">
   <a href="scholar1/">
     <img src="scholar1.jpg" alt="PROF MUHAMMAD SANI UMAR R/L">
@@ -119,11 +169,11 @@ const search = document.getElementById("search");
 const cards = document.querySelectorAll(".card");
 
 search.addEventListener("keyup", function(){
-    let filter = search.value.toLowerCase();
-    cards.forEach(card=>{
-        let text = card.innerText.toLowerCase();
-        card.style.display = text.includes(filter) ? "" : "none";
-    });
+  let filter = search.value.toLowerCase();
+  cards.forEach(card=>{
+    let text = card.innerText.toLowerCase();
+    card.style.display = text.includes(filter) ? "" : "none";
+  });
 });
 </script>
 
