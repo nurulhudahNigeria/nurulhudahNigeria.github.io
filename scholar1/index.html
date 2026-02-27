@@ -40,6 +40,21 @@ header {
   align-items:center;
 }
 
+.home-link {
+  display:inline-block;
+  margin-bottom:10px;
+  padding:6px 12px;
+  background:#0d47a1;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+.home-link:hover {
+  background:#1565c0;
+}
+
 .scholar-img {
   width:200px;
   height:200px;
@@ -55,21 +70,20 @@ h2 {
   font-weight:bold;
 }
 
-/* Cards container */
+/* Cards container - vertical layout */
 .cards-container {
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
+  flex-direction:column;   /* vertical stack */
+  align-items:center;
+  gap:10px;
   margin-top:20px;
   width:100%;
-  max-width:600px;
+  max-width:200px;         /* same width as scholar picture */
 }
 
-/* Individual card */
 .card {
-  width:120px;
-  height:100px;
+  width:100%;               /* full width of container */
+  height:60px;
   background:white;
   border-radius:10px;
   box-shadow:0 3px 6px rgba(0,0,0,0.15);
@@ -98,10 +112,14 @@ a.back-link:hover {
 <header>PROF MUHAMMAD SANI UMAR R/L</header>
 
 <div class="container">
+
+  <!-- Home button -->
+  <a href="../" class="home-link">🏠 Home</a>
+
   <img src="../scholar1.jpg" alt="PROF MUHAMMAD SANI UMAR R/L" class="scholar-img">
   <h2>PROF MUHAMMAD SANI UMAR R/L</h2>
 
-  <!-- 10 placeholder cards -->
+  <!-- 10 vertical cards -->
   <div class="cards-container">
     <div class="card">Card 1</div>
     <div class="card">Card 2</div>
@@ -119,4 +137,5 @@ a.back-link:hover {
 </div>
 
 </body>
-</html>  
+</html>
+  
